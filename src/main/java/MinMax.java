@@ -56,23 +56,23 @@ return 0;
             }
             fetcher[i]=minmax ;
         }
-        var ref = new Object() {
-            int maxmin = fetcher[0];
-            int count =0;
-        };
-        Arrays.stream(fetcher).sequential().forEach(s->
-        {
-            if (s > ref.maxmin && side.equals("row")) {
-                ref.maxmin =s;
-                ref.count++;
-            }
-            if (s < ref.maxmin && side.equals("column")) {
-                ref.maxmin =s;
-                ref.count++;
-            }
-        });
-        row[0]=ref.maxmin;
-        row[1]=ref.count;
+        //var ref = new Object() {
+//            int maxmin = fetcher[0];
+//            int count =0;
+//        };
+//        Arrays.stream(fetcher).sequential().forEach(s->
+//        {
+//            if (s > ref.maxmin && side.equals("row")) {
+//                ref.maxmin =s;
+//                ref.count++;
+//            }
+//            if (s < ref.maxmin && side.equals("column")) {
+//                ref.maxmin =s;
+//                ref.count++;
+//            }
+//        });
+//        row[0]=ref.maxmin;
+//        row[1]=ref.count;
         return  row;
 
     }
