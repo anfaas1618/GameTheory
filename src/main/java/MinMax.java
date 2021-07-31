@@ -7,6 +7,12 @@ public class MinMax {
                         {25,14,8,10},
                         {40,2,10,5},
                         {-5,4,11,0}};
+
+        int x=minmax(payoff);
+        System.out.println("the payoff is "+x);
+    }
+    public   static  int minmax(int[][] payoff)
+    {
         int[] RowPosAndMin=RowPos(payoff,"row");
         int [][] columnpayoff= tranposematrix(payoff);
         int[] ColumnPosAndMin=RowPos(columnpayoff,"column");
@@ -18,9 +24,9 @@ public class MinMax {
         {
             System.out.println("yay you found saddle point at ("+RowPosAndMin[1]+","+ColumnPosAndMin[1]+")");
             System.out.println("Game Value is "+payoff[RowPosAndMin[1]][ColumnPosAndMin[1]]);
+            return 1;
         }
-
-
+return 0;
     }
 
     private static int[][] tranposematrix(int[][] payoff) {
@@ -68,6 +74,6 @@ public class MinMax {
         row[0]=ref.maxmin;
         row[1]=ref.count;
         return  row;
-    }
 
+    }
 }
