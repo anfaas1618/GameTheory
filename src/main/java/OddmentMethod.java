@@ -5,8 +5,8 @@ public class OddmentMethod {
 
         int[][] payoff=    new
                 int[][]{
-                {2,5},
-                {3,-3}};
+                {4,0},
+                {0,8}};
         for (int[] ints : payoff) {
             for (int j = 0; j < payoff.length; j++) {
                 System.out.print(ints[j] + " ");
@@ -48,6 +48,9 @@ public class OddmentMethod {
         System.out.println("\t\t\t\tr0c0 x c1 + r0c1 x c2\n" +
                 "Game Value =\t----------------------\n" +
                 "\t\t\t\t\t   c1 + c2");
+        System.out.println("\t\t\t\t "+payoff00+" x "+c1+" + "+payoff01+" x "+c2+"\n" +
+                "Game Value =\t----------------------\n" +
+                "\t\t\t\t\t   "+c1+" + "+c2);
         double denominator=c1+c2;
         double numerator= (payoff00*c1)+(payoff01*c2);
 
