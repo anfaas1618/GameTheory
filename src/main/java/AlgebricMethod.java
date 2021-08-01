@@ -8,9 +8,9 @@ public class AlgebricMethod {
         int q1[],q2[],q3[];
         int[][] payoff=    new
                 int[][]{
-                        {5,4,-3},
-                        {-6,2,1},
-                        {4,7,-1}};
+                        {3,4,-2},
+                        {-3,0,1},
+                        {1,-4,2}};
     int x= MinMax.minmax(payoff);
         for (int[] ints : payoff) {
             for (int j = 0; j < payoff.length; j++) {

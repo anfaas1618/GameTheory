@@ -9,7 +9,7 @@ public class MinMax {
                         {-5,4,11,0}};
 
         int x=minmax(payoff);
-        System.out.println("the payoff is "+x);
+        System.out.println("the payoff is solvable "+x);
     }
     public   static  int minmax(int[][] payoff)
     {
