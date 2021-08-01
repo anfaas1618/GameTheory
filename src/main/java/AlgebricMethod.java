@@ -8,9 +8,9 @@ public class AlgebricMethod {
         int q1[],q2[],q3[];
         int[][] payoff=    new
                 int[][]{
-                        {-2,-4,3},
-                        {-1,3,6},
-                        {1,2,-2}};
+                        {5,4,-3},
+                        {-6,2,1},
+                        {4,7,-1}};
     int x= MinMax.minmax(payoff);
         for (int[] ints : payoff) {
             for (int j = 0; j < payoff.length; j++) {
@@ -197,7 +197,7 @@ public class AlgebricMethod {
                          (payoff[2][0]*p3value*q1value) +
                          (payoff[2][1]*p2value*q2value) +
                          (payoff[2][2]*p2value*q3value);
-
+            //todo confirm this ans of gv with real solving
         System.out.println(GameValue);
         System.out.println(convertDecimalToFraction(GameValue));
     }
