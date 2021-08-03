@@ -5,18 +5,40 @@ public class OddmentMethod {
 
         int[][] payoff=    new
                 int[][]{
-                {2,5},
-                {3,-3}};
+                {4,-5},
+                {-5,-2}};
         for (int[] ints : payoff) {
             for (int j = 0; j < payoff.length; j++) {
                 System.out.print(ints[j] + " ");
             }
             System.out.println();
         }
-        r1=Math.abs(payoff[1][0]-payoff[1][1]);
-        r2=Math.abs(payoff[0][0]-payoff[0][1]);
-        c1=Math.abs(payoff[0][1]-payoff[1][1]);
-        c2=Math.abs(payoff[0][0]-payoff[1][0]);
+        int x=0;
+        if (x==0) {
+            r1 = Math.abs(payoff[1][0] - payoff[1][1]);
+            r2 = Math.abs(payoff[0][0] - payoff[0][1]);
+            c1 = Math.abs(payoff[0][1] - payoff[1][1]);
+            c2 = Math.abs(payoff[0][0] - payoff[1][0]);
+        }
+        else {
+            int a= payoff[1][0] ;
+            int b =payoff[1][1];
+             r1 = a>b?a-b:b-a;
+             a= payoff[0][0] ;
+             b =payoff[0][1];
+            r2 = a>b?a-b:b-a;
+            a= payoff[0][1] ;
+            b =payoff[1][1];
+            c1 = a>b?a-b:b-a;
+            a= payoff[0][0] ;
+            b =payoff[1][0];
+            c2 = a>b?a-b:b-a;
+
+            System.out.println(r1);
+            System.out.println(r2);
+            System.out.println(c1);
+            System.out.println(c2);
+        }
         System.out.println("r1="+r1);
         System.out.println("r2="+r2);
         System.out.println("c1="+c1);
@@ -77,3 +99,4 @@ public class OddmentMethod {
             return h1+"/"+k1;
     }
 }
+

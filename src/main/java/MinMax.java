@@ -3,10 +3,9 @@ import java.util.Arrays;
 public class MinMax {
     public static void main(String[] args) {
         int [][]  payoff=new
-                int[][]{{20,15,12,35},
-                        {25,14,8,10},
-                        {40,2,10,5},
-                        {-5,4,11,0}};
+                int[][]{{-8,-5},
+                        {8,-4},
+                       };
 
         int x=minmax(payoff);
         System.out.println("the payoff is solvable "+x);
