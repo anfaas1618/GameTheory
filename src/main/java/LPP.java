@@ -86,34 +86,188 @@ public class LPP {
         int c[] =new int[3];
         double value[]= new double[3];
         Scanner sc =new Scanner(System.in);
-        while (true) {
-            for (int i = 0; i < 3; i++) {
-                System.out.println("enter the value of target row");
-                target[i] = sc.nextInt() - 1;
-                System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
-                c[i] = sc.nextInt();
-                System.out.println("enter the key value");
-                key[i] = sc.nextInt() - 1;
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
 
-                double num, denom = 1;
-                System.out.println("enter the value for key numerator ");
-                num = sc.nextFloat();
-                System.out.println("enter the value for key denom");
-                denom = sc.nextFloat();
-                value[i] = (double) num / denom;
-            }
-            System.out.println("value is "+value);
-            transformation(target[0],c[0],key[0],value[0]);
-            System.out.println("#####################111111111111111111########");
-            printitall();
-            transformation(target[1],c[1],key[1],value[1]);
-            System.out.println("##################222222222222222222###########");
-            printitall();
-            transformation(target[2],c[2],key[2],value[2]);
-
-            System.out.println("################33333333333333333333333##########");
-            printitall();
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
         }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
+        }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
+        }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
+        }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
+        }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
+        }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("enter the value of target row");
+            target[i]= sc.nextInt()-1;
+            System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+            c[i]=sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            double num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+            num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(double) num/denom;
+        }
+        System.out.println("value is "+value);
+        transformation(target[0],c[0],key[0],value[0]);
+        System.out.println("#####################111111111111111111########");
+        printitall();
+        transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+        transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
 
     }
     public static void printitall() {
