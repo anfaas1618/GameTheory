@@ -5,8 +5,8 @@ public class OddmentMethod {
 
         int[][] payoff=    new
                 int[][]{
-                {4,-5},
-                {-5,-2}};
+                {1,3},
+                {8,5}};
         for (int[] ints : payoff) {
             for (int j = 0; j < payoff.length; j++) {
                 System.out.print(ints[j] + " ");

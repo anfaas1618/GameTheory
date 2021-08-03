@@ -3,8 +3,8 @@ import java.util.Arrays;
 public class MinMax {
     public static void main(String[] args) {
         int [][]  payoff=new
-                int[][]{{-8,-5},
-                        {8,-4},
+                int[][]{{1,3},
+                        {8,5},
                        };
 
         int x=minmax(payoff);
