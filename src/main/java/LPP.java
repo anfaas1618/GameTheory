@@ -86,27 +86,42 @@ public class LPP {
         int c[] =new int[3];
         float value[]=new float[3];
         Scanner sc =new Scanner(System.in);
-        for (int i = 0; i < 3; i++) {
+       for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
-           target[i]= sc.nextInt();
+           target[i]= sc.nextInt()-1;
             System.out.println("enter the value of  coofcient(1/0) if exist in target value R1->c*R1 + something");
             c[i]=sc.nextInt();
-            System.out.println("");
-            target[i]= sc.nextInt();
+            System.out.println("enter the key value");
+            key[i]= sc.nextInt()-1;
+
+            float num,denom = 1;
+            System.out.println("enter the value for key numerator ");
+         num=sc.nextFloat();
+            System.out.println("enter the value for key denom");
+            denom=sc.nextFloat();
+            value[i]=(float) num/denom;
         }
         System.out.println("value is "+value);
  transformation(target[0],c[0],key[0],value[0]);
- printitall();
+        System.out.println("#####################111111111111111111########");
+        printitall();
+       transformation(target[1],c[1],key[1],value[1]);
+        System.out.println("##################222222222222222222###########");
+        printitall();
+       transformation(target[2],c[2],key[2],value[2]);
+
+        System.out.println("################33333333333333333333333##########");
+        printitall();
     }
     public static void printitall() {
         for (int i = 0; i < u1.length; i++) {
-            System.out.print(u1[i]+ "  ");
-            System.out.print(u2[i]+ "  ");
-            System.out.print(u3[i]+ "  ");
-            System.out.print(s1[i]+ "  ");
-            System.out.print(s2[i]+ "  ");
-            System.out.print(s3[i]+ "  ");
-            System.out.print(b[i]+ "  ");
+            System.out.print(convertDecimalToFraction(u1[i])+" ");
+            System.out.print(convertDecimalToFraction(u2[i])+" ");
+            System.out.print(convertDecimalToFraction(u3[i])+" ");
+            System.out.print(convertDecimalToFraction(s1[i])+" ");
+            System.out.print(convertDecimalToFraction(s2[i])+" ");
+            System.out.print(convertDecimalToFraction(s3[i])+" ");
+            System.out.print(convertDecimalToFraction(b[i])+ "  ");
             System.out.println("");
         }
     }
@@ -119,6 +134,7 @@ public class LPP {
         s1[target]= (c*s1[target]+s1[key]*value);
         s2[target]= (c*s2[target]+s2[key]*value);
         s3[target]= (c*s3[target]+s3[key]*value);
+        b[target]= (c*b[target]+b[key]*value);
 //        System.out.print(convertDecimalToFraction(u1[target])+" ");
 //        System.out.print(convertDecimalToFraction(u2[target])+" ");
 //        System.out.print(convertDecimalToFraction(u3[target])+" ");
