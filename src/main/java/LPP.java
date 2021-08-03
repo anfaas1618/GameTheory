@@ -2,9 +2,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class LPP {
-     static double u1[],u2[],u3[],s1[],s2[],s3[],b[] = new double[3],cj[] = new double[6],zj[] = new double[6],cb[]=new double[3];
+    static double u1[],u2[],u3[],s1[],s2[],s3[],b[] = new double[3],cj[] = new double[6],zj[] = new double[6],cb[]=new double[3];
 
-         static  double[][] payoff;
+    static  double[][] payoff;
     public static void main(String[] args) {
         u1 =new double[3];
         u2 =new double[3];
@@ -34,7 +34,7 @@ public class LPP {
         s3[1]=0;
         s3[2]=1;
 
-         payoff=    new
+        payoff=    new
                 double[][]{
                 {1,-1,3},
                 {3,5,-3},
@@ -66,7 +66,7 @@ public class LPP {
         }
         //
 
-       double sum=0;
+        double sum=0;
         zj[0]=cb[0]*u1[0]+cb[1]*u1[1]+cb[2]*u1[2];
         zj[1]=cb[0]*u2[0]+cb[1]*u2[1]+cb[2]*u2[2];
         zj[2]=cb[0]*u3[0]+cb[1]*u3[1]+cb[2]*u3[2];
@@ -77,41 +77,44 @@ public class LPP {
 
 //r1->0+r3/6
         // r1->r1/3-r3*2/3
-       // target -> 2*target + key*value
+        // target -> 2*target + key*value
 
 //        int target = 2,key = 2,c = 0;
 //        float  value = (float)1/6;
         int target []=new int[3];
         int key[]=new int[3];
         int c[] =new int[3];
-        float value[]=new float[3];
+        double value[]= new double[3];
         Scanner sc =new Scanner(System.in);
-       for (int i = 0; i < 3; i++) {
-            System.out.println("enter the value of target row");
-           target[i]= sc.nextInt()-1;
-            System.out.println("enter the value of  coofcient(1/0) if exist in target value R1->c*R1 + something");
-            c[i]=sc.nextInt();
-            System.out.println("enter the key value");
-            key[i]= sc.nextInt()-1;
+        while (true) {
+            for (int i = 0; i < 3; i++) {
+                System.out.println("enter the value of target row");
+                target[i] = sc.nextInt() - 1;
+                System.out.println("enter the value of  coefficient(1/0) if exist in target value R1->c*R1 + something");
+                c[i] = sc.nextInt();
+                System.out.println("enter the key value");
+                key[i] = sc.nextInt() - 1;
 
-            float num,denom = 1;
-            System.out.println("enter the value for key numerator ");
-         num=sc.nextFloat();
-            System.out.println("enter the value for key denom");
-            denom=sc.nextFloat();
-            value[i]=(float) num/denom;
+                double num, denom = 1;
+                System.out.println("enter the value for key numerator ");
+                num = sc.nextFloat();
+                System.out.println("enter the value for key denom");
+                denom = sc.nextFloat();
+                value[i] = (double) num / denom;
+            }
+            System.out.println("value is "+value);
+            transformation(target[0],c[0],key[0],value[0]);
+            System.out.println("#####################111111111111111111########");
+            printitall();
+            transformation(target[1],c[1],key[1],value[1]);
+            System.out.println("##################222222222222222222###########");
+            printitall();
+            transformation(target[2],c[2],key[2],value[2]);
+
+            System.out.println("################33333333333333333333333##########");
+            printitall();
         }
-        System.out.println("value is "+value);
- transformation(target[0],c[0],key[0],value[0]);
-        System.out.println("#####################111111111111111111########");
-        printitall();
-       transformation(target[1],c[1],key[1],value[1]);
-        System.out.println("##################222222222222222222###########");
-        printitall();
-       transformation(target[2],c[2],key[2],value[2]);
 
-        System.out.println("################33333333333333333333333##########");
-        printitall();
     }
     public static void printitall() {
         for (int i = 0; i < u1.length; i++) {
@@ -121,7 +124,7 @@ public class LPP {
             System.out.print(convertDecimalToFraction(s1[i])+" ");
             System.out.print(convertDecimalToFraction(s2[i])+" ");
             System.out.print(convertDecimalToFraction(s3[i])+" ");
-            System.out.print(convertDecimalToFraction(b[i])+ "  ");
+            System.out.print(convertDecimalToFraction(b[i])+"  ");
             System.out.println("");
         }
     }
@@ -135,6 +138,8 @@ public class LPP {
         s2[target]= (c*s2[target]+s2[key]*value);
         s3[target]= (c*s3[target]+s3[key]*value);
         b[target]= (c*b[target]+b[key]*value);
+        System.out.println("tally");
+
 //        System.out.print(convertDecimalToFraction(u1[target])+" ");
 //        System.out.print(convertDecimalToFraction(u2[target])+" ");
 //        System.out.print(convertDecimalToFraction(u3[target])+" ");
@@ -145,7 +150,7 @@ public class LPP {
 
     }
 
-    
+
 
 
 
