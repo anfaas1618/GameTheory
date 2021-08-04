@@ -86,6 +86,8 @@ public class LPP {
         int c[] =new int[3];
         double value[]= new double[3];
         Scanner sc =new Scanner(System.in);
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -112,6 +114,8 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -138,6 +142,8 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -164,6 +170,9 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
+
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -190,6 +199,8 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -216,6 +227,8 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -242,6 +255,8 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
+        System.out.println("enter pos of cb for 1");
+        cb[sc.nextInt()]=1;
         for (int i = 0; i < 3; i++) {
             System.out.println("enter the value of target row");
             target[i]= sc.nextInt()-1;
@@ -280,6 +295,33 @@ public class LPP {
             System.out.print(convertDecimalToFraction(s3[i])+" ");
             System.out.print(convertDecimalToFraction(b[i])+"  ");
             System.out.println("");
+            if (convertDecimalToFraction(u1[i]).contains("E"))
+                u1[i]=0;
+            if (convertDecimalToFraction(u2[i]).contains("E"))
+                u2[i]=0;
+            if (convertDecimalToFraction(u3[i]).contains("E"))
+                u3[i]=0;
+            if (convertDecimalToFraction(s1[i]).contains("E"))
+                s1[i]=0;
+            if (convertDecimalToFraction(s2[i]).contains("E"))
+                s2[i]=0;
+            if (convertDecimalToFraction(s3[i]).contains("E"))
+                s3[i]=0;
+            if (convertDecimalToFraction(b[i]).contains("E"))
+                b[i]=0;
+        }
+        zj[0]=cb[0]*u1[0]+cb[1]*u1[1]+cb[2]*u1[2];
+        zj[1]=cb[0]*u2[0]+cb[1]*u2[1]+cb[2]*u2[2];
+        zj[2]=cb[0]*u3[0]+cb[1]*u3[1]+cb[2]*u3[2];
+        zj[3]=cb[0]*s1[0]+cb[1]*s1[1]+cb[2]*s1[2];
+        zj[4]=cb[0]*s2[0]+cb[1]*s2[1]+cb[2]*s2[2];
+        zj[5]=cb[0]*s3[0]+cb[1]*s3[1]+cb[2]*s3[2];
+
+        System.out.println("zj values");
+        Arrays.stream(zj).forEach(s-> System.out.print(convertDecimalToFraction(s)+"  " ));
+        System.out.println("cj-zj");
+        for (int i = 0; i < 6; i++) {
+            System.out.print(convertDecimalToFraction(cj[i]-zj[i])+"  ");
         }
     }
 
@@ -294,14 +336,13 @@ public class LPP {
         b[target]= (c*b[target]+b[key]*value);
         System.out.println("tally");
 
+
 //        System.out.print(convertDecimalToFraction(u1[target])+" ");
 //        System.out.print(convertDecimalToFraction(u2[target])+" ");
 //        System.out.print(convertDecimalToFraction(u3[target])+" ");
 //        System.out.print(convertDecimalToFraction(s1[target])+" ");
 //        System.out.print(convertDecimalToFraction(s2[target])+" ");
 //        System.out.print(convertDecimalToFraction(s3[target])+" ");
-
-
     }
 
 
