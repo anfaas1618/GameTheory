@@ -34,11 +34,8 @@ public class LPP {
         s3[1]=0;
         s3[2]=1;
 
-        payoff=    new
-                double[][]{
-                {1,-1,3},
-                {3,5,-3},
-                {6,2,-2}};
+
+        inputMatrix();
         for (int i = 0; i < payoff.length; i++) {
             for (int j = 0; j < payoff.length; j++) {
                 System.out.print(payoff[i][j]+" ");
@@ -64,7 +61,7 @@ public class LPP {
             System.out.print(b[i]+ "  ");
             System.out.println("");
         }
-        //
+
 
         double sum=0;
         zj[0]=cb[0]*u1[0]+cb[1]*u1[1]+cb[2]*u1[2];
@@ -188,6 +185,7 @@ public class LPP {
             denom=sc.nextFloat();
             value[i]=(double) num/denom;
         }
+
         System.out.println("value is "+value);
         transformation(target[0],c[0],key[0],value[0]);
         System.out.println("#####################111111111111111111########");
@@ -236,7 +234,6 @@ public class LPP {
             c[i]=sc.nextInt();
             System.out.println("enter the key value");
             key[i]= sc.nextInt()-1;
-
             double num,denom = 1;
             System.out.println("enter the value for key numerator ");
             num=sc.nextFloat();
@@ -283,8 +280,19 @@ public class LPP {
 
         System.out.println("################33333333333333333333333##########");
         printitall();
-
     }
+    private static void inputMatrix() {
+        System.out.println("enter the values");
+        Scanner sc =new Scanner(System.in);
+        payoff =new double[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+
+                payoff[i][j]=sc.nextDouble();
+            }
+        }
+    }
+
     public static void printitall() {
         for (int i = 0; i < u1.length; i++) {
             System.out.print(convertDecimalToFraction(u1[i])+" ");
@@ -335,8 +343,6 @@ public class LPP {
         s3[target]= (c*s3[target]+s3[key]*value);
         b[target]= (c*b[target]+b[key]*value);
         System.out.println("tally");
-
-
 //        System.out.print(convertDecimalToFraction(u1[target])+" ");
 //        System.out.print(convertDecimalToFraction(u2[target])+" ");
 //        System.out.print(convertDecimalToFraction(u3[target])+" ");
@@ -344,13 +350,6 @@ public class LPP {
 //        System.out.print(convertDecimalToFraction(s2[target])+" ");
 //        System.out.print(convertDecimalToFraction(s3[target])+" ");
     }
-
-
-
-
-
-
-
 
 
 
