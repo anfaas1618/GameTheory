@@ -34,7 +34,9 @@ public class ProbabilityMethod {
         System.out.println("p2="+p2);
         System.out.println("q1="+q1);
         System.out.println("q2="+q2);
-        System.out.println("**********************************************************");
+        System.out.println("************************differentiation of e1 with p1 **********************************");
+
+
 
 
     }
