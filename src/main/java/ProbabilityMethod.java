@@ -35,9 +35,70 @@ public class ProbabilityMethod {
         System.out.println("q1="+q1);
         System.out.println("q2="+q2);
         System.out.println("************************differentiation of e1 with p1 **********************************");
+        System.out.println("equation 1 is =");
+        int[] q1_after_diff,q2_after_diff,constant;
+        q1_after_diff =new int[2];
+        q2_after_diff=new int[2];
+        constant=new int[2];
+        q1_after_diff[0]=p1q1;
+        q2_after_diff[0]=p1q2;
+        constant[0]=p1;
+        System.out.println("("+q1_after_diff[0]+")q1 + ("+q2_after_diff[0]+")q2 + ("+constant[0]+") = 0");
+
+        System.out.println("************************differentiation of e1 with p2 **********************************");
+        System.out.println("equation 2 is =");
+        q1_after_diff[1]=p2q1;
+        q2_after_diff[1]=p2q2;
+        constant[1]=p2;
+        System.out.println("("+q1_after_diff[1]+")q1 + ("+q2_after_diff[1]+")q2 + ("+constant[1]+") = 0");
+
+double values[]=new double[3];
+
+    values= solveSimultaneousEquations(q1_after_diff[0],q2_after_diff[0],q1_after_diff[1],q2_after_diff[1],-constant[0],-constant[1] );
+  values[2]=1-values[0]-values[1];
+        System.out.println("q1=" + values[0] + " q2=" + values[1]+" 1-q1-q2="+values[2]);
+        System.out.println("in fractions");
+        System.out.println("q1=" + convertDecimalToFraction(values[0]) + "  q2=" +
+                                 convertDecimalToFraction(values[1])+"  (1-q1-q2)="+
+                                 convertDecimalToFraction(values[2]));
+
+        System.out.println("mixed strategy for B is ["+convertDecimalToFraction(values[0])+","+
+                                                       convertDecimalToFraction(values[1])+","+
+                                                       convertDecimalToFraction(values[2])+"]");
 
 
-
-
+    }
+    //taken from stackoverflow
+    //modified here
+    public static double[] solveSimultaneousEquations(double a, double b, double c, double d, double e, double f) {
+        double det = ((a) * (d) - (b) * (c));  //instead of 1/
+        double x = ((d) * (e) - (b) * (f)) / det;
+        double y = ((a) * (f) - (c) * (e)) / det;
+        double[] xy=new double[3];
+        xy[0]=x;
+        xy[1]=y;
+        xy[2]=0.0;
+        return xy;
+    }
+    static private String convertDecimalToFraction(double x){
+        if (x < 0){
+            return "-" + convertDecimalToFraction(-x);
+        }
+        double tolerance = 1.0E-6;
+        double h1=1; double h2=0;
+        double k1=0; double k2=1;
+        double b = x;
+        do {
+            double a = Math.floor(b);
+            double aux = h1; h1 = a*h1+h2; h2 = aux;
+            aux = k1; k1 = a*k1+k2; k2 = aux;
+            b = 1/(b-a);
+        } while (Math.abs(x-h1/k1) > x*tolerance);
+        int h11 = (int) h1;
+        int k11 = (int) k1;
+        if (k1==1)
+            return ""+h11;
+        else
+            return h11+"/"+k11;
     }
 }
