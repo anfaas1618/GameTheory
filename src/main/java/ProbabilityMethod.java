@@ -53,6 +53,7 @@ public class ProbabilityMethod {
         System.out.println("p2="+p2);
         System.out.println("q1="+q1);
         System.out.println("q2="+q2);
+        System.out.println("constant="+c);
     }
     private static void PrintDifferentiationFor_e(int p1q1, int p1q2, int p1, int p2q1, int p2q2, int p2, int q1, int q2, int c, int e) {
         if (e==1) {
