@@ -14,12 +14,12 @@ public class ProbabilityMethod {
                 {-1,5,0},
                 {6 ,-1,2}
         };
-        Probabilityformatrix(payoffA,"b");
-        Probabilityformatrix(payoffB,"a");
+        ProbabilityForMatrix(payoffA,"b");
+        ProbabilityForMatrix(payoffB,"a");
 
     }
 
-    private static void Probabilityformatrix(int[][] payoffA,String player) {
+    private static void ProbabilityForMatrix(int[][] payoffA, String player) {
         int p1q1,p1q2,p1;
         int p2q1,p2q2,p2;
         int q1,q2,c;
