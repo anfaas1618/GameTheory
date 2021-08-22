@@ -104,10 +104,12 @@ public class ProbabilityMethod {
             System.out.println("q1=" + convertDecimalToFraction(values[0]) + "  q2=" +
                     convertDecimalToFraction(values[1]) + "  (1-q1-q2)=" +
                     convertDecimalToFraction(values[2]));
-
+            System.out.println("*******************************************************************************************************************");
             System.out.println("mixed strategy for B is [" + convertDecimalToFraction(values[0]) + "," +
                     convertDecimalToFraction(values[1]) + "," +
                     convertDecimalToFraction(values[2]) + "]");
+            System.out.println("*******************************************************************************************************************");
+
         }
         else {
             values[2] = 1 - values[0] - values[1];
@@ -116,10 +118,12 @@ public class ProbabilityMethod {
             System.out.println("p1=" + convertDecimalToFraction(values[0]) + "  p2=" +
                     convertDecimalToFraction(values[1]) + "  (1-p1-p2)=" +
                     convertDecimalToFraction(values[2]));
-
+            System.out.println("*******************************************************************************************************************");
             System.out.println("mixed strategy for A is [" + convertDecimalToFraction(values[0]) + "," +
                     convertDecimalToFraction(values[1]) + "," +
                     convertDecimalToFraction(values[2]) + "]");
+            System.out.println("*******************************************************************************************************************");
+
         }
 
 
