@@ -8,8 +8,8 @@ public class AlgebricMethod {
         int q1[],q2[],q3[];
         int[][] payoff=    new
                 int[][]{
-                {5,4,-3},
-                {-6,2,1},
+                {5,8,3},
+                {6,3,1},
                 {4,7,-1}};
     int x= MinMax.minmax(payoff);
         for (int[] ints : payoff) {
@@ -200,6 +200,10 @@ public class AlgebricMethod {
             //todo confirm this ans of gv with real solving
         System.out.println(GameValue);
         System.out.println(convertDecimalToFraction(GameValue));
+        System.out.println(convertDecimalToFraction(q1value)+" * "+payoff[0][0]+" + "+convertDecimalToFraction(q2value)+" * "+payoff[0][1]+convertDecimalToFraction(q3value)+"*"+payoff[0][2] );
+        double xx =q1value* payoff[0][0]+q2value* payoff[0][1]+q3value* payoff[0][2];
+        System.out.println("optional gv " +xx);
+        System.out.println("optional gv in fractions = " +convertDecimalToFraction(xx));
     }
 
     private static String GetFracValue(int[] value) {
@@ -226,10 +230,11 @@ public class AlgebricMethod {
             aux = k1; k1 = a*k1+k2; k2 = aux;
             b = 1/(b-a);
         } while (Math.abs(x-h1/k1) > x*tolerance);
+        int h11 = (int) h1;
+        int k11 = (int) k1;
         if (k1==1)
-            return ""+h1;
+            return ""+h11;
         else
-            return h1+"/"+k1;
+            return h11+"/"+k11;
     }
-
 }

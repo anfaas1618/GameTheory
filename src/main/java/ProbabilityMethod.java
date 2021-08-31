@@ -16,9 +16,7 @@ public class ProbabilityMethod {
         };
         ProbabilityForMatrix(payoffA,"b");
         ProbabilityForMatrix(payoffB,"a");
-
     }
-
     private static void ProbabilityForMatrix(int[][] payoffA, String player) {
         int p1q1,p1q2,p1;
         int p2q1,p2q2,p2;
